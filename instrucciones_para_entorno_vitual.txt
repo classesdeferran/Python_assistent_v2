@@ -1,0 +1,13 @@
+Para preparar el entorno virtual:
+python -m venv env
+"env" será el nombre del entorno
+
+Para activarlo:
+.\env\scripts\activate
+
+Si da error, hay que abrir una consola de PowerShell 
+como administrador y escribir
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+Después la letra "o" para responder a todo sí
+
+
