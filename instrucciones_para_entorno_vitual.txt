@@ -10,4 +10,11 @@ como administrador y escribir
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 Después la letra "o" para responder a todo sí
 
+Guardar la lista de las librerís del proyecto:
+python -m pip freeze > requirements.txt
+
+Recuperar las librerías necesarias
+pip install -r requirements.txt
+
+
 

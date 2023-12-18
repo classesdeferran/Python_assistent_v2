@@ -2,7 +2,8 @@
 # pip install pyaudio
 
 # Instal·lar aquesta versió de SpeechRecognition:
-# pip install SpeechRecognition==3.10.0   
+# pip install SpeechRecognition==3.10.0  
+# les posteriors no funcionaran 
 import speech_recognition as sr
 
 
@@ -14,8 +15,8 @@ def audio_a_text():
         audio = r.listen(source)
 
         try:
-            text = r.recognize_google(audio, language="ca" )
-            print("Has dit :", text)
+            text = r.recognize_google(audio, language="es" )
+            # print("Has dit :", text)
             return text
         except sr.UnknownValueError:
             print("No t'he entès. Ho pots repetir, si us plau?")
@@ -27,4 +28,4 @@ def audio_a_text():
             print("Error greu")
             return "Error"
         
-audio_a_text()
+# audio_a_text()
