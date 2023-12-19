@@ -3,7 +3,7 @@ python -m venv env
 "env" será el nombre del entorno
 
 Para activarlo:
-.\env\scripts\activate
+.\venv\scripts\activate
 
 Si da error, hay que abrir una consola de PowerShell 
 como administrador y escribir
