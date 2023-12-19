@@ -7,6 +7,7 @@ from meteo import meteo_ciudad
 import webbrowser
 import pywhatkit
 import wikipedia
+from hora_ciudad import obtener_hora_ciudad
 
 nombre_assistente = "Hal"
 
@@ -29,6 +30,12 @@ def centro_peticiones():
             audio_PC(pedir_dia_actual())
             continue
 
+        elif "qué hora es en" in peticion:
+            ciudad = peticion.replace("qué hora es en ", "") 
+            ciudad = quitar_acentos(ciudad.lower())           
+            audio_PC(obtener_hora_ciudad(ciudad))
+            continue
+
         elif "qué hora es" in peticion:
             hora = datetime.datetime.now()
             hora = f"En este momento son las {hora.hour} con {hora.minute} y {hora.second} segundos"
@@ -48,9 +55,14 @@ def centro_peticiones():
             continue
 
         elif "reproduce" in peticion:
-            audio_PC("¡A mi también me gusta!")
             titulo = peticion.replace("reproduce ", "")
+            audio_PC(f"¡A mi también me gusta {titulo}!")
             pywhatkit.playonyt(titulo)
+            continue
+
+        elif "busca en internet" in peticion:
+            busqueda = peticion.replace("busca en internet ", "")
+            pywhatkit.search(busqueda)
             continue
 
         elif "busca en wikipedia" in peticion:
