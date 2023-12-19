@@ -25,8 +25,6 @@ Se esperan temperaturas mínima y máxima de {round(temp_minima,1)} y {temp_maxi
     except:
         return "Nombre de ciudad no válido"
     
-ciudad = "Madrid"
-
-
-print(meteo_ciudad(ciudad))
+# ciudad = "Madrid"
+# print(meteo_ciudad(ciudad))
 # print(meteo_ciudad(ciudad))

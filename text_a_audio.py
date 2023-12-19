@@ -4,12 +4,11 @@ def audio_PC(text):
     engine = pyttsx3.init()
 
     # para ver las voces accesibles
-    for voz in engine.getProperty('voices'):
-        print(voz)
-
+    # for voz in engine.getProperty('voices'):
+    #     print(voz)
 
     # ajustar la velocidad
-    engine.setProperty('rate', 200)
+    engine.setProperty('rate', 170)
     # ajustar el volumen
     engine.setProperty('volume', 1)
 
