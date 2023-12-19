@@ -23,6 +23,6 @@ def obtener_hora_ciudad(ciudad):
     # print("hora_real ", hora_real)
     return f"Ahora en {ciudad} son las {hora_real.strftime('%H:%M')}"
     
-ciudad = "los Angeles"
+ciudad = "Bogotá"
 print(obtener_hora_ciudad(ciudad))
 # print(meteo_ciudad(ciudad))
